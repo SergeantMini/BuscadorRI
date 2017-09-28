@@ -7,13 +7,13 @@
 
 ---
 
-### Descripción del problema
+## Descripción del problema
 
 - Desarrollar un motor de búsqueda utilizando el modelo vectorial como método de peso y el producto punto como método de similitud
 
 ---
 
-### Modelo de datos
+## Modelo de datos
 
 - Se decidió no utilizar una base de datos y trabajar todo en matrices y arreglos.
 - La colección, los documentos y las consultas son cada uno una matriz.
@@ -21,7 +21,7 @@
 
 ---
 
-### Asignación de pesos
+## Asignación de pesos
 
 - Se utilizó el modelo vectorial como esquema de asignación de pesos
 - Se genera un vector donde se guardan todos los términos únicos de la colección
@@ -36,7 +36,7 @@ Por último se realiza TF * IDF para los documentos y las consultas
 
 ---
 
-### Medida de similitud
+## Medida de similitud
 
 - Se utilizó el producto punto para calcular la similitud de nuestras consultas. Dicho producto punto se realizaba entre la consulta deseada y toda la colección.
 
@@ -101,8 +101,6 @@ def separar_docs(path):
     return con 
 ```
 ---
-@[3-6]
-
+## Evaluación de la eficacia
 ---
-### Conclusiones
-
+## Conclusiones
