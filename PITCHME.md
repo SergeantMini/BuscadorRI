@@ -18,3 +18,16 @@
 - Se decidió no utilizar una base de datos y trabajar todo en matrices y arreglos.
 - La colección, los documentos y las consultas son cada uno una matriz.
 - Precisión, cobertura y RR son arreglos.
+
+---
+
+### Asignación de pesos
+
+- Se utilizó el modelo vectorial como esquema de asignación de pesos
+- Se genera un vector donde se guardan todos los términos únicos de la colección
+- Se calcula TF para todos los documentos y las consultas
+
+---
+
+Se calcula el IDF con la siguiente fórmula: 
+![imagendeidf](https://github.com/monicavelaje/BuscadorRI/blob/master/idf.PNG)
