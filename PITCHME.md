@@ -30,4 +30,4 @@
 ---
 
 Se calcula el IDF con la siguiente fórmula: 
-![imagendeidf](https://github.com/monicavelaje/BuscadorRI/blob/master/idf.PNG)
+![imagendeidf](https://raw.githubusercontent.com/monicavelaje/BuscadorRI/master/idf.PNG)
