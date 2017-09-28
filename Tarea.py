@@ -176,7 +176,7 @@ def similitud(doctfidf,queriestfidf):
     return arrayAux
 
 def main_menu():
-    os.system('clear')
+    os.system('cls')
     
     print ("Bienvenidos al Super Buscador!")
     print ("Deseas realizar una consulta?")
@@ -189,7 +189,7 @@ def main_menu():
     return
 
 def correr_menu(opcn):
-    os.system('clear')
+    os.system('cls')
     opcn = str(opcn)
     ch = opcn
     if ch == '':
@@ -265,13 +265,13 @@ varl = int(input())
 valorF = varl - 1
 
 #base de datos
-diferentTerms = vector("/Users/Arturo/Documents/UNI/septimo semestre/recuperación/base de datos/MED_ALL.txt") #vector que contiene todas las palabras diferentes en el doc
-documents = separar_docs("/Users/Arturo/Documents/UNI/septimo semestre/recuperación/base de datos/MED_ALL.txt") 
+diferentTerms = vector("C:\\Users\\mones\\Desktop\\H4\\MED_ALL.txt") #vector que contiene todas las palabras diferentes en el doc
+documents = separar_docs("C:\\Users\\mones\\Desktop\\H4\\MED_ALL.txt") 
 
 #queries
-queries = separar_docs("/Users/Arturo/Documents/UNI/septimo semestre/recuperación/base de datos/MED_QRY.txt") 
+queries = separar_docs("C:\\Users\\mones\\Desktop\\H4\\MED_QRY.txt") 
 
-relevantes = doc_relevantes("/Users/Arturo/Documents/UNI/septimo semestre/recuperación/base de datos/MED_REL_OLD.txt")
+relevantes = doc_relevantes("C:\\Users\\mones\\Desktop\\H4\\MED_QRY.txt")
 
 #La querie que se esta buscando
 print("LA QUERIE ES:")
@@ -343,4 +343,3 @@ fig.append_trace(trace1, 1, 1)
 
 fig['layout'].update(height=600, width=600, title='Querie ' + str(valorF))
 py.iplot(fig, filename='simple-subplot')
-
