@@ -100,3 +100,9 @@ def separar_docs(path):
 
     return con 
 ```
+---
+@[3-6]
+
+---
+### Conclusiones
+
