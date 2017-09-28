@@ -66,7 +66,8 @@ def vector(path):
     lista.sort()
 
     return lista
-  ```  
+  ``` 
+  @[2-5] @[6-15] @[16-21]
 ---
 #### Función para separar y guardar documentos y consultas en matrices
 
