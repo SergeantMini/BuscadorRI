@@ -31,3 +31,39 @@
 
 Se calcula el IDF con la siguiente fórmula: 
 ![imagendeidf](https://raw.githubusercontent.com/monicavelaje/BuscadorRI/master/idf.PNG)
+
+Por último se realiza TF * IDF para los documentos y las consultas
+
+---
+
+### Medida de similitud
+
+- Se utilizó el producto punto para calcular la similitud de nuestras consultas. Dicho producto punto se realizaba entre la consulta deseada y toda la colección.
+
+---
+
+## Función utilizada para generar el vector de términos únicos de nuestra colección
+
+```python
+def vector(path):
+    F = open(path, "r")
+    print("PARSEANDO DOCUMENTO")
+    myset = set()
+    largo = 0
+    for document in F:
+        document = document.replace(".I", " ")
+        document = document.replace(".", " ")
+        document = document.replace(";", " ")
+        document = document.replace(",", " ")
+        document = document.replace(":", " ")
+        document = document.replace("(", " ")
+        document = document.replace(")", " ")
+        lista = document.split()
+        largo = len(lista)
+        for i in range(largo):
+            myset.add(lista[i])
+    lista = list(myset)
+    lista.sort()
+
+    return lista
+  ```  
