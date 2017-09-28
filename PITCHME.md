@@ -42,7 +42,7 @@ Por último se realiza TF * IDF para los documentos y las consultas
 
 ---
 
-## Función utilizada para generar el vector de términos únicos de nuestra colección
+##### Función utilizada para generar el vector de términos únicos de nuestra colección
 
 ```python
 def vector(path):
