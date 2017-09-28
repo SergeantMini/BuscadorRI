@@ -68,7 +68,7 @@ def vector(path):
     return lista
   ```  
 ---
-####Función para separar y guardar documentos y consultas en matrices
+#### Función para separar y guardar documentos y consultas en matrices
 
 ```python
 def separar_docs(path):
