@@ -111,4 +111,8 @@ def separar_docs(path):
 ---
 ## Evaluación de la eficacia
 ---
+## Ejemplos de ejecución
+![captura1](https://raw.githubusercontent.com/monicavelaje/BuscadorRI/master/Captura1.PNG)
+---
+
 ## Conclusiones
