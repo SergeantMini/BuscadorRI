@@ -111,20 +111,18 @@ def separar_docs(path):
 ---
 # Evaluación de la eficacia
 ---
-## Query 1
 ![query1](https://raw.githubusercontent.com/monicavelaje/BuscadorRI/master/Query1.jpeg)
 ---
-## Query 7
 ![query7](https://raw.githubusercontent.com/monicavelaje/BuscadorRI/master/Query7.jpeg)
 ---
-## Query 21
 ![query21](
 ---
-## Ejemplos de ejecución
+# Ejemplos de ejecución
+---
 ![captura1](https://raw.githubusercontent.com/monicavelaje/BuscadorRI/master/Captura1.PNG)
 ---
 ![captura2](https://raw.githubusercontent.com/monicavelaje/BuscadorRI/master/Captura2.PNG)
 ---
 ![captura3]
-
+---
 ## Conclusiones
