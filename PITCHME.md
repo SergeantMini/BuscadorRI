@@ -67,3 +67,36 @@ def vector(path):
 
     return lista
   ```  
+---
+####Función para separar y guardar documentos y consultas en matrices
+
+```python
+def separar_docs(path):
+    F = open(path, "r")
+    print("SEPARANDO DOCUMENTOS")
+    archivo = F.read()
+    documents = archivo.split(".I ")
+    largo = 0
+    con = []
+    terminos = []
+    
+    for document in documents:
+        document = document.replace(".", " ")
+        document = document.replace(";", " ")
+        document = document.replace(",", " ")
+        document = document.replace(":", " ")
+        document = document.replace("(", " ")
+        document = document.replace(")", " ")
+       
+        wordsInDocument = document.split()
+        documentSize = len(wordsInDocument)      
+       
+        for i in range(documentSize):
+            terminos.append(wordsInDocument[i])
+        con.append(terminos)
+        terminos = []
+
+    del con[0]
+
+    return con 
+```
