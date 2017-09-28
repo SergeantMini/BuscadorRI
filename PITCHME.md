@@ -67,6 +67,7 @@ def vector(path):
 
     return lista
   ``` 
+  @[1]
   @[2-5]
   @[6-15]
   @[16-21]
@@ -103,6 +104,10 @@ def separar_docs(path):
 
     return con 
 ```
+@[1]
+@[2-8]
+@[10-19]
+@[21-28]
 ---
 ## Evaluación de la eficacia
 ---
