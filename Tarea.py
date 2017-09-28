@@ -1,5 +1,10 @@
 import math as math
 import sys, os
+from plotly import tools
+import plotly.plotly as py
+import plotly.graph_objs as go
+tools.set_credentials_file(username='domhs', api_key='NmS0T2G4MVuKLAkAR0g8')
+
 
 def vector(path):
     F = open(path, "r")
@@ -171,7 +176,7 @@ def similitud(doctfidf,queriestfidf):
     return arrayAux
 
 def main_menu():
-    os.system('cls')
+    os.system('clear')
     
     print ("Bienvenidos al Super Buscador!")
     print ("Deseas realizar una consulta?")
@@ -184,7 +189,7 @@ def main_menu():
     return
 
 def correr_menu(opcn):
-    os.system('cls')
+    os.system('clear')
     opcn = str(opcn)
     ch = opcn
     if ch == '':
@@ -260,13 +265,13 @@ varl = int(input())
 valorF = varl - 1
 
 #base de datos
-diferentTerms = vector("C:\\Users\\mones\\Desktop\\H4\\MED_ALL.txt") #vector que contiene todas las palabras diferentes en el doc
-documents = separar_docs("C:\\Users\\mones\\Desktop\\H4\\MED_ALL.txt") 
+diferentTerms = vector("/Users/Arturo/Documents/UNI/septimo semestre/recuperación/base de datos/MED_ALL.txt") #vector que contiene todas las palabras diferentes en el doc
+documents = separar_docs("/Users/Arturo/Documents/UNI/septimo semestre/recuperación/base de datos/MED_ALL.txt") 
 
 #queries
-queries = separar_docs("C:\\Users\\mones\\Desktop\\H4\\MED_QRY.txt") 
+queries = separar_docs("/Users/Arturo/Documents/UNI/septimo semestre/recuperación/base de datos/MED_QRY.txt") 
 
-relevantes = doc_relevantes("C:\\Users\\mones\\Desktop\\H4\\MED_REL_OLD.txt")
+relevantes = doc_relevantes("/Users/Arturo/Documents/UNI/septimo semestre/recuperación/base de datos/MED_REL_OLD.txt")
 
 #La querie que se esta buscando
 print("LA QUERIE ES:")
@@ -275,6 +280,16 @@ print(queries[valorF])
 #tf de queries y de documentos
 
 queriesTf = tf(diferentTerms,queries)
+
+'''
+print("PRUEBA DE QUERIES ", queries)
+
+with open('output.csv', 'w', newline='') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=' ',quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    for query in queries:
+        spamwriter.writerow(query + lst + query)
+'''    
+
 matrixTf = tf(diferentTerms,documents)
 
 #idf de documentos y queries
@@ -302,7 +317,7 @@ print("TEMP VALE ", temp, " LARGO AUX VALE ", len(arrayAux))
 print(documents[int(temp[len(temp)- 1])])
 
 
-'''print("LARGOOOOO-----------------", len(relevantes[valorF]))
+print("LARGOOOOO-----------------", len(relevantes[valorF]))
 result = listaResultado(reversed(arrayAux))
 #print(result)
 print("RR ---------------------------")
@@ -314,4 +329,18 @@ print(recall)
 print("PRECISION ---------------------------")
 precision = calcularPrecision(rr)
 print(precision)
-'''
+
+
+trace1 = go.Scatter(
+    x=precision,
+    y=recall
+)
+
+
+fig = tools.make_subplots(rows=1, cols=2)
+
+fig.append_trace(trace1, 1, 1)
+
+fig['layout'].update(height=600, width=600, title='Querie ' + str(valorF))
+py.iplot(fig, filename='simple-subplot')
+
