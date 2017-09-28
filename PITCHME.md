@@ -115,14 +115,12 @@ def separar_docs(path):
 ---
 ![query7](https://raw.githubusercontent.com/monicavelaje/BuscadorRI/master/Query7.jpeg)
 ---
-![query21](
----
 # Ejemplos de ejecución
 ---
 ![captura1](https://raw.githubusercontent.com/monicavelaje/BuscadorRI/master/Captura1.PNG)
 ---
 ![captura2](https://raw.githubusercontent.com/monicavelaje/BuscadorRI/master/Captura2.PNG)
 ---
-![captura3]
+![output](https://raw.githubusercontent.com/monicavelaje/BuscadorRI/master/Output.jpeg)
 ---
-## Conclusiones
+# Conclusiones
